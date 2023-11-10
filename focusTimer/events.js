@@ -17,4 +17,12 @@ export function registerControls() {
   control.soundControls.addEventListener("click", event => {
     console.log(event.target.dataset.action);
   });
+
+  control.minutes.addEventListener("focus", actions.set());
+}
+
+export function setMinutes() {
+  el.minutes.addEventListener("focus", event => {
+    el.minutes.textContent = "00";
+  });
 }
