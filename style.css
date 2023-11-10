@@ -32,7 +32,7 @@ main {
   justify-items: center;
   grid-template-columns: repeat(2, 1fr);
 
-  width: 100vw;
+  width: 100%;
   padding: 19.6rem 22.6rem 18.8rem 23.3rem;
 }
 
@@ -93,4 +93,9 @@ main {
 #sound-controls button.selected {
   background: var(--btn-sec-color);
   color: var(--el-sec-color)
+}
+
+.running .ph-play-circle,
+html:not(.running) .ph-pause-circle {
+  display: none;
 }
