@@ -94,3 +94,7 @@ main {
   background: var(--btn-sec-color);
   color: var(--el-sec-color)
 }
+
+button:hover {
+  cursor: pointer;
+}
