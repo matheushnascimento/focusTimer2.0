@@ -94,8 +94,3 @@ main {
   background: var(--btn-sec-color);
   color: var(--el-sec-color)
 }
-
-.running .ph-play-circle,
-html:not(.running) .ph-pause-circle {
-  display: none;
-}

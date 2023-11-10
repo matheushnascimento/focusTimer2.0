@@ -27,18 +27,23 @@
           <span>00</span>
         </section>
         <section id="time-controls" class="flex">
-          <button class="ph ph-play-circle"></button>
-          <button class="ph ph-pause-circle"></button>
-          <button class="ph ph-stop-circle"></button>
-          <button class="ph ph-plus-circle"></button>
-          <button class="ph ph-minus-circle"></button>
+          <button
+            data-action="toggleRunning"
+            class="ph ph-play-circle"
+          ></button>
+          <button
+            data-action="toggleRunning"
+            class="ph ph-stop-circle"
+          ></button>
+          <button data-action="plus5Sec" class="ph ph-plus-circle"></button>
+          <button data-action="minus5Sec" class="ph ph-minus-circle"></button>
         </section>
       </div>
       <section id="sound-controls" class="flex">
-        <button class="ph ph-tree"></button>
-        <button class="ph ph-cloud-rain"></button>
-        <button class="ph ph-coffee"></button>
-        <button class="ph ph-campfire"></button>
+        <button data-action="forest-song" class="ph ph-tree"></button>
+        <button data-action="rain-song" class="ph ph-cloud-rain"></button>
+        <button data-action="coffee-song" class="ph ph-coffee"></button>
+        <button data-action="camp-song" class="ph ph-campfire"></button>
       </section>
     </main>
   </body>
