@@ -8,7 +8,7 @@
 
 :root {
   --el-pri-color: #323238;
-  --el-sec-color: white;
+  --el-sec-color: #fff;
   --btn-pri-color: #E1E1E6;
   --btn-sec-color: #02799D;
 
@@ -92,4 +92,5 @@ main {
 
 #sound-controls button.selected {
   background: var(--btn-sec-color);
+  color: var(--el-sec-color)
 }
