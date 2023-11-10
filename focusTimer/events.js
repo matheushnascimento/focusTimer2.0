@@ -1,6 +1,6 @@
-import * as control from "./elements.js";
 import * as el from "./elements.js";
 import * as actions from "./actions.js";
+import * as control from "./elements.js";
 
 export function registerControls() {
   control.timeControls.addEventListener("click", event => {
@@ -11,7 +11,7 @@ export function registerControls() {
       return;
     }
 
-    actions[action]();f
+    actions[action]();
   });
 
   control.soundControls.addEventListener("click", event => {
