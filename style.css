@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --el-pri-color: #323238;
+  --el-sec-color: white;
+  --btn-pri-color: #E1E1E6;
+  --btn-sec-color: #02799D;
+
+  font-size: clamp(1%, 1% + 2vw, 62.5%);
+
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  display: grid;
+  place-content: center;
+
+  height: 100vh;
+
+  overflow: hidden;
+
+}
+
+main {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(2, 1fr);
+
+  width: 100vw;
+  padding: 19.6rem 22.6rem 18.8rem 23.3rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#timer {
+  text-align: center;
+  color: var(--el-pri-color);
+  font-size: 12.6rem;
+  font-weight: 500;
+}
+
+#time-controls {
+  display: flex;
+  gap: 4rem;
+}
+
+#time-controls button {
+  width: 4.8rem;
+  height: 4.8rem;
+
+  font-size: 4.8rem;
+
+  color: var(--el-pri-color);
+
+  background: transparent;
+
+  border: none;
+}
+
+#sound-controls {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 3.2rem;
+}
+
+#sound-controls button {
+  width: 13.8rem;
+  height: 15.2rem;
+
+  font-size: 6rem;
+
+  border: none;
+  border-radius: 2.4rem;
+
+}
+
+#sound-controls button.selected {
+  background: var(--btn-sec-color);
+}

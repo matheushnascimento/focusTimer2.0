@@ -3,34 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Focus timer 2.0</title>
+    <title>Focus Timer 2.0</title>
     <!-- !LINKS -->
     <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon" />
+    <link rel="shortcut icon" href="assets/favicon.svg" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- !SCRIPTS -->
-    <script type="module" src="./js/main.js" defer></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
   </head>
   <body>
-    <div class="app">
-      <section id="timer">
-        <span>00</span>
-        <span>:</span>
-        <span>00</span>
+    <main>
+      <div class="container">
+        <section id="timer" class="flex">
+          <span>00</span>
+          <span>:</span>
+          <span>00</span>
+        </section>
+        <section id="time-controls" class="flex">
+          <button class="ph ph-play-circle"></button>
+          <button class="ph ph-stop-circle"></button>
+          <button class="ph ph-plus-circle"></button>
+          <button class="ph ph-minus-circle"></button>
+        </section>
+      </div>
+      <section id="sound-controls" class="flex">
+        <button class="ph ph-tree"></button>
+        <button class="ph ph-cloud-rain"></button>
+        <button class="ph ph-coffee"></button>
+        <button class="ph ph-campfire"></button>
       </section>
-
-      <section id="time-controls">
-        <button>play</button>
-        <button>pause</button>
-        <button>- 5 segundos</button>
-        <button>+ 5 segundos</button>
-      </section>
-
-      <section id="sound-controls">
-        <button>Floresta</button>
-        <button>chuva</button>
-        <button>cafeteria</button>
-        <button>lareira</button>
-      </section>
-    </div>
+    </main>
   </body>
 </html>
