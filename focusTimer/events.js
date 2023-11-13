@@ -16,7 +16,15 @@ export function registerControls() {
   });
 
   el.soundControls.addEventListener("click", event => {
-    console.log(event.target.dataset.action);
+    const action = event.target.dataset.action;
+    const songId = event.target.id;
+
+    if (typeof action === "undefined") {
+      console.log("não é um botão");
+      return;
+    }
+
+    actions[action](songId);
   });
 
   el.minutes.addEventListener("click", event => {
