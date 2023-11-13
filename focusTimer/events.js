@@ -1,9 +1,10 @@
-import * as el from "./elements.js";
+import { updateDisplay } from "./timer.js";
 import * as actions from "./actions.js";
-import * as control from "./elements.js";
+import * as el from "./elements.js";
+import state from "./state.js";
 
 export function registerControls() {
-  control.timeControls.addEventListener("click", event => {
+  el.timeControls.addEventListener("click", event => {
     const action = event.target.dataset.action;
 
     if (typeof action === "undefined") {
@@ -14,15 +15,36 @@ export function registerControls() {
     actions[action]();
   });
 
-  control.soundControls.addEventListener("click", event => {
+  el.soundControls.addEventListener("click", event => {
     console.log(event.target.dataset.action);
   });
 
-  control.minutes.addEventListener("focus", actions.set());
+  el.minutes.addEventListener("click", event => {
+    const action = event.target.dataset.action;
+
+    if (typeof action === "undefined") {
+      console.log("não é um botão");
+      return;
+    }
+
+    actions[action]();
+  });
 }
 
 export function setMinutes() {
   el.minutes.addEventListener("focus", event => {
-    el.minutes.textContent = "00";
+    el.minutes.textContent = "";
+  });
+
+  el.minutes.onkeypress = event => /\d/.test(event.key);
+  el.minutes.addEventListener("blur", event => {
+    let time = el.minutes.textContent;
+    time = time > 60 ? 60 : time;
+
+    state.minutes = time;
+    state.seconds = 0;
+
+    updateDisplay();
+    el.minutes.removeAttribute("contenteditable");
   });
 }
